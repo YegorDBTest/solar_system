@@ -3,62 +3,71 @@
   <head>
     <meta charset="utf-8">
     <title>Solar system</title>
+    <link rel="stylesheet" type="text/css" href="main.css">
   </head>
+
   <body>
-    <div style="position: absolute;
-                top: 50%;
-                left: 50%;
-                transform: translate(-50%, -50%);">
-      <svg width="500" height="500" xmlns="http://www.w3.org/2000/svg">
-        <!-- Sun -->
-        <g>
-          <circle cx="250" cy="250" r="50" fill="yellow" />
+    <div id="wrapper">
+      <svg viewBox="0 0 500 500" width="500" height="500" xmlns="http://www.w3.org/2000/svg">
+
+        <g id="sun">
+          <circle cx="250" cy="250" r="50" />
         </g>
 
-        <!-- Mercury -->
-        <g>
-          <circle id="mercury-path" cx="250" cy="250" r="60" fill="none"/>
-          <circle cx="" cy="" r="3" fill="#95908f">
-            <animateMotion dur="2s" repeatCount="indefinite">
-              <mpath xlink:href="#mercury-path"/>
-            </animateMotion>
+        <g id="mercury">
+          <circle cx="250" cy="190" r="3">
+            <animateTransform
+              attributeName="transform"
+              attributeType="XML"
+              type="rotate"
+              from="0 250 250"
+              to="360 250 250"
+              dur="2s"
+              repeatCount="indefinite" />
           </circle>
         </g>
 
-        <!-- Venus -->
-        <g>
-          <circle id="venus-path" cx="250" cy="250" r="69" fill="none"/>
-          <circle cx="" cy="" r="5" fill="#e6a01b">
-            <animateMotion dur="4s" repeatCount="indefinite">
-              <mpath xlink:href="#venus-path"/>
-            </animateMotion>
+        <g id="venus">
+          <circle cx="250" cy="181" r="5">
+            <animateTransform
+              attributeName="transform"
+              attributeType="XML"
+              type="rotate"
+              from="0 250 250"
+              to="360 250 250"
+              dur="4s"
+              repeatCount="indefinite" />
           </circle>
         </g>
 
-        <!-- Earth -->
-        <g>
-          <circle id="earth-path" cx="250" cy="250" r="81" fill="none"/>
-          <circle cx="" cy="" r="6" fill="#979aab">
-            <animateMotion dur="6s" repeatCount="indefinite">
-              <mpath xlink:href="#earth-path"/>
-            </animateMotion>
+        <g id="earth">
+          <circle cx="250" cy="169" r="6">
+            <animateTransform
+              attributeName="transform"
+              attributeType="XML"
+              type="rotate"
+              from="0 250 250"
+              to="360 250 250"
+              dur="6s"
+              repeatCount="indefinite" />
           </circle>
         </g>
 
-        <!-- Mars -->
-        <g>
-          <circle id="mars-path" cx="250" cy="250" r="92" fill="none"/>
-          <circle cx="" cy="" r="4" fill="#fc8560">
-            <animateMotion dur="10s" repeatCount="indefinite">
-              <mpath xlink:href="#mars-path"/>
-            </animateMotion>
+        <g id="mars">
+          <circle cx="250" cy="158" r="4">
+            <animateTransform
+              attributeName="transform"
+              attributeType="XML"
+              type="rotate"
+              from="0 250 250"
+              to="360 250 250"
+              dur="10s"
+              repeatCount="indefinite" />
           </circle>
         </g>
 
-        <!-- Asteroid belt -->
-        <g>
-          <g>
-            <circle id="mars-path" cx="250" cy="250" r="105" fill="none" stroke="#888888" stroke-dasharray="6 3"/>
+        <g id="asteroid-belt">
+          <circle cx="250" cy="250" r="105">
             <animateTransform
               attributeName="transform"
               attributeType="XML"
@@ -66,10 +75,9 @@
               from="0 250 250"
               to="360 250 250"
               dur="25s"
-              repeatCount="indefinite"/>
-          </g>
-          <g>
-            <circle id="mars-path" cx="250" cy="250" r="108" fill="none" stroke="#888888" stroke-dasharray="6 3"/>
+              repeatCount="indefinite" />
+          </circle>
+          <circle cx="250" cy="250" r="108">
             <animateTransform
               attributeName="transform"
               attributeType="XML"
@@ -77,10 +85,9 @@
               from="0 250 250"
               to="360 250 250"
               dur="32s"
-              repeatCount="indefinite"/>
-          </g>
-          <g>
-            <circle id="mars-path" cx="250" cy="250" r="111" fill="none" stroke="#888888" stroke-dasharray="6 3"/>
+              repeatCount="indefinite" />
+          </circle>
+          <circle cx="250" cy="250" r="111">
             <animateTransform
               attributeName="transform"
               attributeType="XML"
@@ -88,8 +95,8 @@
               from="0 250 250"
               to="360 250 250"
               dur="40s"
-              repeatCount="indefinite"/>
-          </g>
+              repeatCount="indefinite" />
+          </circle>
         </g>
       </svg>
     </div>

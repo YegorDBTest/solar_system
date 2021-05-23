@@ -1,0 +1,45 @@
+:root {
+  --color-red: #ff7b54;
+  --color-yellow: #ffd56b;
+  --color-orange: #ffb26b;
+  --color-green: #939b62;
+}
+
+
+body {
+  background-color: #444444;
+}
+
+#wrapper {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+#sun > circle {
+  fill: var(--color-yellow);
+}
+
+#mercury > circle {
+  fill: var(--color-green);
+  filter: hue-rotate(180deg);
+}
+
+#venus > circle {
+  fill: var(--color-orange);
+}
+
+#earth > circle {
+  fill: var(--color-green);
+}
+
+#mars > circle {
+  fill: var(--color-red);
+}
+
+#asteroid-belt > circle {
+  fill: none;
+  stroke: #999999;
+  stroke-dasharray: 1 2;
+}
