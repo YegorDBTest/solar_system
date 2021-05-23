@@ -3,12 +3,15 @@
   --color-yellow: #ffd56b;
   --color-orange: #ffb26b;
   --color-green: #939b62;
+  --color-dark: #444444;
+  --color-grey: #999999;
 }
 
 
 body {
-  background-color: #444444;
+  background-color: var(--color-dark);
 }
+
 
 #wrapper {
   position: absolute;
@@ -17,29 +20,53 @@ body {
   transform: translate(-50%, -50%);
 }
 
-#sun > circle {
+
+#sun > .object {
   fill: var(--color-yellow);
 }
 
-#mercury > circle {
+#mercury > .object {
   fill: var(--color-green);
   filter: hue-rotate(180deg);
 }
 
-#venus > circle {
+#venus > .object {
   fill: var(--color-orange);
 }
 
-#earth > circle {
+#earth > .object {
   fill: var(--color-green);
 }
 
-#mars > circle {
+#mars > .object {
   fill: var(--color-red);
 }
 
-#asteroid-belt > circle {
+#jupiter > .object {
+  fill: var(--color-yellow);
+  filter: contrast(40%);
+}
+
+#saturn > .object {
+  fill: var(--color-orange);
+  filter: contrast(60%);
+}
+#saturn > .ring {
+  stroke-dasharray: 1 1 !important;
+}
+
+#uranus > .object {
+  fill: var(--color-yellow);
+  filter: brightness(200%);
+}
+
+#neptune > .object {
+  fill: var(--color-green);
+  filter: hue-rotate(120deg);
+}
+
+.ring {
   fill: none;
-  stroke: #999999;
+  stroke: var(--color-grey);
   stroke-dasharray: 1 2;
 }
